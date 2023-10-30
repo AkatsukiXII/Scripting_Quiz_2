@@ -14,16 +14,12 @@ def score(ID,name,litScore,mathScore,compScore):
     print("成績判定 : {}".format(passTmp))
 
 if __name__ =='__main__':
-    ID = input("請輸入您的學號 : ")
-    name = input("請輸入您的姓名 : ")
-    litScore = input("請輸入您的國文成績 : ")
-    mathScore = input("請輸入您的數學成績 : ")
-    compScore = input("請輸入您的電腦成績 : ")
     scoreDict = {}
-    scoreDict["sid"] = ID
-    scoreDict["sname"] = name
-    scoreDict["fchina"] = round(float(litScore),2)
-    scoreDict["fmath"] = round(float(mathScore),2)
-    scoreDict["finfo"] = round(float(compScore),2)
+    scoreDict["sid"] = input("請輸入您的學號 : ")
+    scoreDict["sname"] = input("請輸入您的姓名 : ")
+    scoreDict["fchina"] = round(float(input("請輸入您的國文成績 : ")),2)
+    scoreDict["fmath"] = round(float(input("請輸入您的數學成績 : ")),2)
+    scoreDict["finfo"] = round(float(input("請輸入您的電腦成績 : ")),2)
+    
     print(scoreDict)
     score(scoreDict["sid"],scoreDict["sname"],scoreDict["fchina"],scoreDict["fmath"],scoreDict["finfo"])
